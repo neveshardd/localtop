@@ -1,6 +1,6 @@
 'use client'
 
-import { CircleUser, HeartPlus, House, ShoppingBag, Store } from "lucide-react";
+import { CircleUser, HeartPlus, House, Search, ShoppingBag, Store } from "lucide-react";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useRef, useState } from "react";
@@ -65,18 +65,21 @@ export default function NavBar() {
     }, [emblaApi, direction]);
 
     return (
-        <nav className="bg-white">
-            <div className="flex justify-between items-center p-6 max-w-8xl mx-auto">
+        <nav className="bg-white border-b-3 border-black/10">
+            <div className="flex justify-between items-center p-6 max-w-7xl mx-auto">
                 <Link href="/" className="font-bold text-2xl">Localtop</Link>
                 <CircleUser size={24} />
             </div>
 
             <div className="flex flex-col items-center space-y-5 max-w-6xl px-6 mx-auto">
-                <input
-                    type="search"
-                    placeholder="Buscar lanchonetes, lojas..."
-                    className="w-full max-w-3xl p-3.5 border border-black/30 shadow-xl rounded-full"
-                />
+                <div className="relative w-full max-w-3xl">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                    <input
+                        type="search"
+                        placeholder="Buscar lanchonetes, lojas..."
+                        className="w-full pl-10 p-3.5 border border-black/30 shadow-xl rounded-full"
+                    />
+                </div>
 
                 <div className="w-full max-w-6xl overflow-hidden" ref={emblaRef}>
                     <div className="flex">
@@ -86,7 +89,7 @@ export default function NavBar() {
                                 <Link
                                     key={index}
                                     href={category.page}
-                                    className="flex flex-col items-center min-w-[150px] px-2 py-6 mx-2 rounded-2xl hover:bg-black/5"
+                                    className="flex flex-col items-center min-w-[100px] px-2 py-6 mx-2 rounded-2xl hover:bg-black/5"
                                 >
                                     <Icon size={20} />
                                     <span className="mt-1 text-sm">{category.name}</span>
