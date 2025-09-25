@@ -3,32 +3,13 @@
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useRef, useState } from "react";
-import { Book, CircleUser, Coffee, CreditCard, Dumbbell, Frame, GalleryHorizontal, Heart, Hotel, IceCream, Move, Music, PawPrint, Scissors, Search, Shirt, ShoppingCart, ToolCase, TreeDeciduous, Utensils } from "lucide-react";
+import { CircleUser, Coffee, Dumbbell, Heart, Search } from "lucide-react";
 import { Description, Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 
 const categories = [
-    { name: 'Cafeterias', icon: Coffee, page: '/cafeterias' },
-    { name: 'Estúdios', icon: Dumbbell, page: '/estudios' },
-    { name: 'Clínicas', icon: Heart, page: '/clinicas' },
-    { name: 'Supermercados', icon: ShoppingCart, page: '/supermercados' },
-    { name: 'Teatros', icon: Move, page: '/teatros' },
-    { name: 'Parques', icon: TreeDeciduous, page: '/parques' },
-    { name: 'Postos de Gasolina', icon: GalleryHorizontal, page: '/postos' },
-    { name: 'Pet Shops', icon: PawPrint, page: '/petshops' },
-    { name: 'Salões de Beleza', icon: Scissors, page: '/saloes' },
-    { name: 'Sorveterias', icon: IceCream, page: '/sorveterias' },
-    { name: 'Casas de Show', icon: Music, page: '/casasdeshow' },
-    { name: 'Livrarias', icon: Book, page: '/livrarias' },
-    { name: 'Academias', icon: Dumbbell, page: '/academias' },
-    { name: 'Bancos', icon: CreditCard, page: '/bancos' },
-    { name: 'Cabeleireiros', icon: Scissors, page: '/cabeleireiros' },
-    { name: 'Cafés', icon: Coffee, page: '/cafes' },
-    { name: 'Clínicas Odontológicas', icon: ToolCase, page: '/clinicas-odontologicas' },
-    { name: 'Farmácias', icon: Frame, page: '/farmacias' },
-    { name: 'Hotéis', icon: Hotel, page: '/hoteis' },
-    { name: 'Lojas de Roupas', icon: Shirt, page: '/lojas-de-roupas' },
-    { name: 'Restaurantes', icon: Utensils, page: '/restaurantes' },
-    { name: 'Supermercados', icon: ShoppingCart, page: '/supermercados' },
+    { name: 'Cuidados', icon: Coffee, page: '/cuidados' },
+    { name: 'Restaurantes', icon: Dumbbell, page: '/restaurantes' },
+    { name: 'Mercados', icon: Heart, page: '/mercados' },
 ]
 
 export default function NavBar() {
