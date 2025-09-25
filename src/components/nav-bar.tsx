@@ -13,7 +13,7 @@ const categories = [
 ]
 
 export default function NavBar() {
-    let [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
     const pathname = usePathname();
 
     return (
@@ -53,7 +53,7 @@ export default function NavBar() {
                 <div className="flex flex-col items-center max-w-6xl mx-auto space-y-5 px-6">
                     <button
                         onClick={() => setIsOpen(true)}
-                        className="flex items-center space-x-2 border rounded-full p-4 w-full max-w-2xl border-black/20 text-black/40 shadow-md"
+                        className="flex items-center space-x-2 border rounded-full p-4 w-full max-w-2xl border-black/20 text-black/40 shadow-md cursor-pointer transition-all"
                     >
                         <Search />
                         <p>Buscar Lanchonete, Hospital, Bar...</p>
