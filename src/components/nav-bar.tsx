@@ -15,9 +15,15 @@ const categories = [
     { name: 'Academias', icon: CircleUser, page: '/academias' },
     { name: 'Hospitais', icon: HeartPlus, page: '/hospitais' },
     { name: 'Shoppings', icon: ShoppingBag, page: '/shoppings' },
+    { name: 'Bares', icon: HeartPlus, page: '/bares' },
+    { name: 'Padarias', icon: Store, page: '/padarias' },
+    { name: 'Salões', icon: CircleUser, page: '/saloes' },
+    { name: 'Pet Shop', icon: HeartPlus, page: '/petshop' },
+    { name: 'Cinemas', icon: Store, page: '/cinemas' },
     { name: 'Parques', icon: House, page: '/parques' },
-    { name: 'Pet Shops', icon: Store, page: '/petshops' },
-
+    { name: 'Postos', icon: ShoppingBag, page: '/postos' },
+    { name: 'Lavanderias', icon: CircleUser, page: '/lavanderias' },
+    { name: 'Farm Shops', icon: HeartPlus, page: '/farmshops' },
 ];
 
 export default function NavBar() {
@@ -68,7 +74,7 @@ export default function NavBar() {
         <nav className="bg-white border-b-3 border-black/10">
             <div className="flex justify-between items-center p-6 max-w-7xl mx-auto">
                 <Link href="/" className="font-bold text-2xl">Localtop</Link>
-                <CircleUser size={24} />
+                <CircleUser size={28} />
             </div>
 
             <div className="flex flex-col items-center space-y-5 max-w-6xl px-6 mx-auto">
@@ -81,7 +87,7 @@ export default function NavBar() {
                     />
                 </div>
 
-                <div className="w-full max-w-6xl overflow-hidden" ref={emblaRef}>
+                <div className="w-full max-w-6xl overflow-hidden mb-2" ref={emblaRef}>
                     <div className="flex">
                         {categories.map((category, index) => {
                             const Icon = category.icon;
