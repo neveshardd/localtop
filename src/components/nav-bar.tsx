@@ -83,7 +83,7 @@ export default function NavBar() {
                     <input
                         type="search"
                         placeholder="Buscar lanchonetes, lojas..."
-                        className="w-full pl-10 p-3.5 border border-black/30 shadow-xl rounded-full"
+                        className="w-full pl-10 p-3.5 border border-black/15 shadow-xl rounded-full focus:outline-black/60"
                     />
                 </div>
 
