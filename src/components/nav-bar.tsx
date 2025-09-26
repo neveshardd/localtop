@@ -8,8 +8,8 @@ import { Description, Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@
 
 const categories = [
     { name: 'Restaurantes', icon: Utensils, page: '/' },
-    { name: 'Cuidados', icon: Heart, page: '/cuidados' },
-    { name: 'Mercados', icon: ShoppingCart, page: '/mercados' },
+    { name: 'Cuidados', icon: Heart, page: '/care' },
+    { name: 'Mercados', icon: ShoppingCart, page: '/markets' },
 ]
 
 export default function NavBar() {
@@ -23,19 +23,20 @@ export default function NavBar() {
                     <Link href="/" className="font-bold text-2xl">Localtop</Link>
 
                     <div className="max-w-6xl hidden md:flex justify-center items-center">
-                        <div className="flex justify-center space-x-2 ml-28">
+                        <div className="flex justify-center space-x-8 ml-28">
                             {categories.map((category, index) => {
                                 const isActive = pathname === category.page;
                                 return (
                                     <Link
                                         key={index}
                                         href={category.page}
-                                        className="flex space-x-4 items-center min-w-[100px] py-3 rounded-t-2xl justify-center relative"
                                     >
-                                        <span className="mt-1 text-sm text-center font-medium">{category.name}</span>
-                                        {isActive && (
-                                            <span className="absolute -bottom-1 left-0 right-0 h-1 bg-black" />
-                                        )}
+                                        <span className="mt-1 text-sm text-center font-medium relative">
+                                            {category.name}
+                                            {isActive && (
+                                                <span className="absolute -bottom-2.5 left-0 w-full h-0.5 bg-black transition-all" />
+                                            )}
+                                        </span>
                                     </Link>
                                 )
                             })}
