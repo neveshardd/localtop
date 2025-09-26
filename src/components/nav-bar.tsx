@@ -57,7 +57,7 @@ export default function NavBar() {
                         className="flex items-center space-x-2 border rounded-full p-4 w-full max-w-2xl border-black/20 text-black/40 shadow-md cursor-pointer transition-all"
                     >
                         <Search />
-                        <p>Buscar Lanchonete, Hospital, Bar...</p>
+                        <p>Busque Lanchonetes, Lojas...</p>
                     </button>
 
                     <div className="w-full max-w-6xl overflow-hidden mb-4 md:hidden">
