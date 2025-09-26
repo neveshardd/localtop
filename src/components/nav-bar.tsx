@@ -94,8 +94,8 @@ export default function NavBar() {
                                     </DropdownMenuGroup>
                                     <DropdownMenuSeparator></DropdownMenuSeparator>
                                 <DropdownMenuGroup>
-                                    <DropdownMenuItem>
-                                        <LogOut />
+                                    <DropdownMenuItem className="text-red-500">
+                                        <LogOut className="text-red-500"/>
                                         Sair da Conta
                                     </DropdownMenuItem>
                                 </DropdownMenuGroup>
