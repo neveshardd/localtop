@@ -19,7 +19,7 @@ export default function NavBar() {
     return (
         <>
             <nav className="bg-white border-b-3 border-black/10">
-                <div className="flex justify-between items-center p-6 max-w-6xs mx-auto">
+                <div className="flex justify-between items-center p-6 max-w-6xl mx-auto">
                     <Link href="/" className="font-bold text-2xl">Localtop</Link>
 
                     <div className="max-w-6xl hidden md:flex justify-center items-center">

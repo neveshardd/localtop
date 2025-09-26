@@ -30,7 +30,7 @@ export default function RootLayout({
         cz-shortcut-listen="true"
       >
         <NavBar />
-        <main className="px-6 mx-auto max-w-8xl mt-8">{children}</main>
+        <main className="px-6 mx-auto max-w-6xl mt-8">{children}</main>
       </body>
     </html>
   );
